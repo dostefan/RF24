@@ -42,7 +42,7 @@ void RF24::csn(bool mode)
 		_SPI.setBitOrder(MSBFIRST);
 		_SPI.setDataMode(SPI_MODE0);
 		#if !defined(F_CPU) || F_CPU < 20000000
-			_SPI.setClockDivider(SPI_CLOCK_DIV2);
+			_SPI.setClockDivider(SPI_CLOCK_DIV4);
 		#elif F_CPU < 40000000
 			_SPI.setClockDivider(SPI_CLOCK_DIV4);
 		#elif F_CPU < 80000000
